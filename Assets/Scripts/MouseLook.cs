@@ -2,9 +2,6 @@ using UnityEngine;
 
 namespace KS
 {
-
-
-
     public class MouseLook : MonoBehaviour
     {
         GameObject player;

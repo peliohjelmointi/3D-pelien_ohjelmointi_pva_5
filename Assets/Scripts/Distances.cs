@@ -17,7 +17,7 @@ public class Distances : MonoBehaviour
         Vector3 distanceVector = playerPosition - obstaclePosition;
         float distance = distanceVector.magnitude;
                
-        print(distance);
+        //print(distance);
        
 
     }
