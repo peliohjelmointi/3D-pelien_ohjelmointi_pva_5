@@ -96,6 +96,8 @@ public class BoxSelection : MonoBehaviour
     void SelectUnits()
     {
 
+
+
         // TEHTÄVÄ
         //// Lisää haluamasi gameobjectit jonkun skriptin awakessa
         //// listaan allUnitsList.
@@ -116,5 +118,8 @@ public class BoxSelection : MonoBehaviour
         //{
         //    print("ENEMY INSIDE SELECTION BOX!");
         //}
+
+
+
     }
 }

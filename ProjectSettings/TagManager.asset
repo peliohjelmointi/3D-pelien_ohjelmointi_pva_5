@@ -14,8 +14,8 @@ TagManager:
   - Projectile
   - Player
   - MinimapIcon
-  - 
-  - 
+  - Selectable
+  - Ground
   - 
   - 
   - 
