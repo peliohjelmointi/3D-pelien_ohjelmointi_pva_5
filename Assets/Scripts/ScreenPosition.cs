@@ -7,7 +7,7 @@ public class ScreenPosition : MonoBehaviour
     private void Start()
     {
         Vector2 screenPoint = cam.WorldToScreenPoint(transform.position);
-        print("SCREEN POINT=" + screenPoint.ToString());
+        //print("SCREEN POINT=" + screenPoint.ToString());
     }
 
 }

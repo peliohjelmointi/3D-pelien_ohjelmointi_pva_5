@@ -96,24 +96,25 @@ public class BoxSelection : MonoBehaviour
     void SelectUnits()
     {
 
-         // TEHTÄVÄ
-            //// Lisää haluamasi gameobjectit jonkun skriptin awakessa
-            //// listaan allUnitsList.
-            //// käy foreachilla läpi jokainen listan gameobjekti,
-            //// ja laita if-lause foreachin sisään.  
-            //// Esim.
-            
-        //      foreach (var unit in allUnitsList)
-            //  {
-            //    if (selectionBox.Contains(cam.WorldToScreenPoint(unit.transform.position)))
-            //    {
-            //        //vaihda vaikka valitun gameobjektin materiaali toiseksi
-            //    }
-            //}
+        // TEHTÄVÄ
+        //// Lisää haluamasi gameobjectit jonkun skriptin awakessa
+        //// listaan allUnitsList.
+        //// käy foreachilla läpi jokainen listan gameobjekti,
+        //// ja laita if-lause foreachin sisään.  
+        //// Esim.
 
-        if (selectionBox.Contains(cam.WorldToScreenPoint(enemyTransform.position)))
+        foreach (var unit in UnitManager.Instance.allUnits)
         {
-            print("ENEMY INSIDE SELECTION BOX!");
+            if (selectionBox.Contains(cam.WorldToScreenPoint(unit.transform.position)))
+            {
+                //vaihda vaikka valitun gameobjektin materiaali toiseksi
+                print(unit.name);
+            }
         }
+
+        //if (selectionBox.Contains(cam.WorldToScreenPoint(enemyTransform.position)))
+        //{
+        //    print("ENEMY INSIDE SELECTION BOX!");
+        //}
     }
 }

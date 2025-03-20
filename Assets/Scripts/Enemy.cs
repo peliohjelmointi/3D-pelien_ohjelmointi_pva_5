@@ -7,9 +7,15 @@ public class Enemy : MonoBehaviour
 
     NavMeshAgent agent;
 
+ 
     private void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();       
+    }
+
+    private void Start()
+    {
+        UnitManager.Instance.allUnits.Add(gameObject);
     }
 
     private void Update()
