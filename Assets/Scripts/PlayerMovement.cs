@@ -3,7 +3,6 @@ using UnityEngine;
 namespace KS
 {
 
-
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] float moveSpeed;

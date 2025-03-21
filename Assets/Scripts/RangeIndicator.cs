@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class RangeIndicator : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class RangeIndicator : MonoBehaviour
         rangeIndicator = transform.Find("RangeIndicator");
         rangeIndicator.GetComponent<Renderer>().material = defaultMaterial;
 
-       
+        Actions.OnEnemyDied += ChangeColorToRed;
     }
 
     private void Update()
@@ -37,6 +38,12 @@ public class RangeIndicator : MonoBehaviour
         }
 
 
+    }
+
+    public void ChangeColorToRed()
+    {
+        //print("Change color to red");
+        transform.GetComponent<Renderer>().material = RedMaterial;
     }
 
 }

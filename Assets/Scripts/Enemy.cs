@@ -6,11 +6,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform player;
 
     NavMeshAgent agent;
-
  
     private void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();       
+        agent = GetComponent<NavMeshAgent>();
+        Actions.OnEnemyDied += PlayDeathSound;
     }
 
     private void Start()
@@ -23,6 +23,18 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(player.position);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Projectile"))
+        {
+            Actions.OnEnemyDied?.Invoke();
+        }
+    }
 
+    void PlayDeathSound()
+    {
+        print("AAARRRGH");
+        Destroy(gameObject);
+    }
 
 }

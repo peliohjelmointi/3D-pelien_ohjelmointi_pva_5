@@ -1,5 +1,4 @@
 using System.Collections.Generic; //List vaatii tämän
-using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -82,7 +81,8 @@ public class UnitManager : MonoBehaviour
     }
 
     void ToggleUnit(GameObject unit, bool isActive)
-    {
+    {      
+
         unit.GetComponent<Cube>().enabled = isActive;
         
         if(isActive==true)

@@ -10,6 +10,12 @@ public class Cube : MonoBehaviour
     public Material defaultMat;
     public Material greenMat;
 
+
+    void PlayClickSound()
+    {
+        print("UNIT ACTIVED sound playing..");
+    }
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
